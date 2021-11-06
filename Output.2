@@ -1,0 +1,44 @@
+
+set_robust_list(0x7fdeb3b42a20, 24)     = 0
+setsid()                                = 20513
+chdir("/")                              = 0
+openat(AT_FDCWD, "/dev/null", O_RDONLY) = 5
+dup3(5, 0, 0)                           = 0
+close(5)                                = 0
+openat(AT_FDCWD, "/dev/null", O_WRONLY|O_CREAT|O_TRUNC, 0666) = 5
+dup3(5, 1, 0)                           = 1
+close(5)                                = 0
+openat(AT_FDCWD, "/dev/null", O_WRONLY|O_CREAT|O_TRUNC, 0666) = 5
+dup3(5, 2, 0)                           = 2
+close(5)                                = 0
+rt_sigaction(SIGHUP, {sa_handler=0x5589b1802a46, sa_mask=[HUP], sa_flags=SA_RESTORER|SA_RESTART, sa_restorer=0x7fdeb337b040}, {sa_handler=SIG_DFL, sa_mask=[], sa_flags=0}, 8) = 0
+rt_sigaction(SIGINT, {sa_handler=0x5589b1802a46, sa_mask=[INT], sa_flags=SA_RESTORER|SA_RESTART, sa_restorer=0x7fdeb337b040}, {sa_handler=SIG_DFL, sa_mask=[], sa_flags=0}, 8) = 0
+rt_sigaction(SIGQUIT, {sa_handler=0x5589b1802a46, sa_mask=[QUIT], sa_flags=SA_RESTORER|SA_RESTART, sa_restorer=0x7fdeb337b040}, {sa_handler=SIG_DFL, sa_mask=[], sa_flags=0}, 8) = 0
+rt_sigaction(SIGTERM, {sa_handler=0x5589b1802a46, sa_mask=[TERM], sa_flags=SA_RESTORER|SA_RESTART, sa_restorer=0x7fdeb337b040}, {sa_handler=SIG_DFL, sa_mask=[], sa_flags=0}, 8) = 0
+stat("/proc/sys/kernel/random/lrng_type", 0x7fff97270710) = -1 ENOENT (No such file or directory)
+rt_sigaction(SIGALRM, {sa_handler=0x5589b1802913, sa_mask=[ALRM], sa_flags=SA_RESTORER|SA_RESTART, sa_restorer=0x7fdeb337b040}, {sa_handler=SIG_DFL, sa_mask=[], sa_flags=0}, 8) = 0
+alarm(5)                                = 0
+select(4, NULL, [3], NULL, NULL)        = ? ERESTARTNOHAND (To be restarted if no handler)
+--- SIGALRM {si_signo=SIGALRM, si_code=SI_KERNEL} ---
+read(4, "2576\n", 5)                    = 5
+lseek(4, 0, SEEK_SET)                   = 0
+stat("/proc/sys/kernel/random/lrng_type", 0x7fff97270090) = -1 ENOENT (No such file or directory)
+rt_sigaction(SIGALRM, {sa_handler=0x5589b1802913, sa_mask=[ALRM], sa_flags=SA_RESTORER|SA_RESTART, sa_restorer=0x7fdeb337b040}, {sa_handler=0x5589b1802913, sa_mask=[ALRM], sa_flags=SA_RESTORER|SA_RESTART, sa_restorer=0x7fdeb337b040}, 8) = 0
+alarm(5)                                = 0
+rt_sigreturn({mask=[]})                 = -1 EINTR (Interrupted system call)
+select(4, NULL, [3], NULL, NULL)        = ? ERESTARTNOHAND (To be restarted if no handler)
+--- SIGALRM {si_signo=SIGALRM, si_code=SI_KERNEL} ---
+read(4, "2576\n", 5)                    = 5
+lseek(4, 0, SEEK_SET)                   = 0
+stat("/proc/sys/kernel/random/lrng_type", 0x7fff97270090) = -1 ENOENT (No such file or directory)
+rt_sigaction(SIGALRM, {sa_handler=0x5589b1802913, sa_mask=[ALRM], sa_flags=SA_RESTORER|SA_RESTART, sa_restorer=0x7fdeb337b040}, {sa_handler=0x5589b1802913, sa_mask=[ALRM], sa_flags=SA_RESTORER|SA_RESTART, sa_restorer=0x7fdeb337b040}, 8) = 0
+alarm(5)                                = 0
+rt_sigreturn({mask=[]})                 = -1 EINTR (Interrupted system call)
+select(4, NULL, [3], NULL, NULL)        = ? ERESTARTNOHAND (To be restarted if no handler)
+--- SIGALRM {si_signo=SIGALRM, si_code=SI_KERNEL} ---
+read(4, "2576\n", 5)                    = 5
+lseek(4, 0, SEEK_SET)                   = 0
+stat("/proc/sys/kernel/random/lrng_type", 0x7fff97270090) = -1 ENOENT (No such file or directory)
+rt_sigaction(SIGALRM, {sa_handler=0x5589b1802913, sa_mask=[ALRM], sa_flags=SA_RESTORER|SA_RESTART, sa_restorer=0x7fdeb337b040}, {sa_handler=0x5589b1802913, sa_mask=[ALRM], sa_flags=SA_RESTORER|SA_RESTART, sa_restorer=0x7fdeb337b040}, 8) = 0
+alarm(5)                                = 0
+rt_sigreturn({mask=[]})                 = -1 EINTR (Interrupted system call)
